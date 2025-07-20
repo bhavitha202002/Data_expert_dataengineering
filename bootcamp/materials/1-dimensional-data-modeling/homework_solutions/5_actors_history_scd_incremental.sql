@@ -113,5 +113,11 @@ SELECT * FROM unnested_changed_records
 UNION ALL
 SELECT * FROM new_records
 
+/*
 
+Developing of SCD-2 involved the following steps:
+
+1. Forming a base table which contains data year by year and containing cumulative data that can be helpful for building scd-2
+2. Historical loading of scd-2 with the help of is_active, quality_class changes
+3. Now for incremental-we take historical_scd, unchanged_records, changed_records, new records
 
